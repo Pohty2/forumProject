@@ -57,14 +57,13 @@ $validate=new Validation();
 				$mail->SMTPSecure = "ssl";                 // sets the prefix to the servier
 				$mail->Host       = "smtp.gmail.com";      // sets GMAIL as the SMTP server smtp.gmail.com
 				$mail->Port       = 465;                   // set the SMTP port for the GMAIL server
-				$mail->Username   = "atiqatest@gmail.com";  // GMAIL username
-				$mail->Password   = "atiqatest123";            // GMAIL password
+				$mail->Username   = "example@email.com";  // GMAIL username
+				$mail->Password   = "password";            // GMAIL password
 
-				$mail->SetFrom('atiqatest@gmail.com', '[Admin] ABC Jobs Pte Ltd');
+				$mail->SetFrom('example@gmail.com', '[Admin] ABC Jobs Pte Ltd');
 				$mail->Subject    = "Reset Password";			
 				$mail->Body = "Your Temporary Password is ".$newpassword[0];
-				//$address = "nuratiqa.93@gmail.com";
-				//$mail->AddAddress($address, "Atiqa");
+		
 				$mail->AddAddress($email);
 
 				if(!$mail->Send()) {
